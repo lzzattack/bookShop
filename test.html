@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <style>
+        div{
+            height:749px;
+        }
+    </style>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
+    <script>
+        jQuery(function($) {
+            $('#nav')
+                .bind('mousewheel', function(event, delta) {
+                    var dir = delta > 0 ? 'Up' : 'Down';
+                    if (dir == 'Up') {
+                        console.log("向上滚动, www.imiansha.com");
+                    }
+                    else {
+                        console.log("向下滚动， http: //blog.csdn.net/u011627980");
+                    }
+                    return false;
+                });
+        });
+
+    </script>
+</head>
+<body>
+<div style="background: red">1</div>
+<div style="background: green">2</div>
+<div style="background: blue">3</div>
+</body>
+</html>
